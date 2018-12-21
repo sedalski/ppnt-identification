@@ -1,0 +1,53 @@
+.icon- {
+    &align-top::after {
+        content: "\E016";
+    }
+    &align-left::after {
+        content: "\E003";
+    }
+    &align-center::after {
+        content: "\E005";
+    }
+    &align-right::after {
+        content: "\E004";
+    }
+    &align-top::after {
+        content: "\E004";
+        transform: rotate(-90deg);
+    }
+    &align-middle::after {
+        content: "\E005";
+        transform: rotate(90deg);
+    }
+    &align-bottom::after {
+        content: "\E004";
+        transform: rotate(90deg) scaleY(-1);
+    }
+    &to-top::after {
+        content: "\E016";
+    }
+    &to-bottom::after {
+        content: "\E015";
+    }
+    &lock::after {
+        content: "\E01A";
+        font-size: 8px !important;
+    }
+    &padding::after {
+        content: "\E01B";
+        font-size: 8px !important;
+    }
+    &radius::after {
+        content: "\E01C";
+        font-size: 8px !important;
+    }
+    &tick::after {
+        content: "\E08B";
+    }
+    &close::after {
+        content: "\E00A";
+        transform: rotate(-45deg);
+        font-size: 7px !important;
+
+    }
+}

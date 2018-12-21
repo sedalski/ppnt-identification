@@ -1,0 +1,26 @@
+.fieldset {
+    display: flex;
+    margin-bottom: 4px;
+    align-items: center;
+    legend {
+        font-size: 13px;
+        line-height: 24px;
+        width: 66px;
+        align-self: flex-start;
+        color: $colorGreyMid;
+        &:not(:first-child) {
+            margin-left: 4px;
+        }
+    }
+    .fieldset__separator {
+        width: 26px;
+    }
+    &--lock {
+        .input-element__lock-visible label {
+            display: none;
+        }
+        .input-element__lock-hidden {
+            display: none;
+        }
+    }
+}

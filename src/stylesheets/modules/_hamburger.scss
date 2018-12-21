@@ -1,0 +1,19 @@
+.hamburger {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 17px 0;
+    span {
+        width: 12px;
+        height: 12px;
+        border-right: solid 1px $color-white;
+        border-bottom: solid 1px $color-white;
+        display: block;
+        transform: rotate(-45deg);
+        position: absolute;
+    }
+}

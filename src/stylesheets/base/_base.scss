@@ -1,0 +1,38 @@
+//and here it adds global, base styles - is it correct? todo refactor
+
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+a, input {
+    text-decoration: none;
+    color: $colorWhite;
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+input[type=text] {
+    margin: 0;
+    appearance: none;
+}
+
+body {
+    font: $fontSize $fontSans;
+    color: $colorGreyDark;
+    font-weight: 500;
+}

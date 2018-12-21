@@ -1,0 +1,19 @@
+.stroke-line-type {
+    display: flex;
+    align-items: center;
+    &::after {
+        content: "";
+        border-bottom: $colorBlack 2px;
+        width: 100%;
+        display: block;
+    }
+    &.stroke-line-type--solid::after {
+        border-bottom-style: solid;
+    }
+    &.stroke-line-type--dotted::after {
+        border-bottom-style: dotted;
+    }
+    &.stroke-line-type--dashed::after {
+        border-bottom-style: dashed;
+    }
+}

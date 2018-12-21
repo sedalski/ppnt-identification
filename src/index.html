@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PPNT Gdynia - księga identyfikacji wizualnej</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i&amp;subset=latin-ext"
+          rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<main id="page" class="page">
+    <header class="header">
+        <h1>PPNT Gdynia - księga identyfiakcji wizualnej</h1>
+        <div class="hamburger hamburger--open">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17.89" height="16.09" viewBox="0 0 17.89 16.09">
+                <g data-name="Layer 2" fill="#ffffff">
+                    <path d="M16.38 16.09H1.52A1.52 1.52 0 0 1 0 14.58V4.16h1v10.42a.52.52 0 0 0 .52.51h14.86a.51.51 0 0 0 .51-.51V4.16h1v10.42a1.52 1.52 0 0 1-1.51 1.51z"/>
+                    <path d="M8.96 8.52l-4.39-4.4.7-.7L8.96 7.1l3.68-3.68.71.7-4.39 4.4z"/>
+                    <path d="M8.46 0h1v7.81h-1z"/>
+                </g>
+            </svg>
+        </div>
+    </header>
+    <section id="document" class="pdf-viewer">
+        <canvas id="canvas" class="pdf-viewer__viewport"></canvas>
+        <div id="controls" class="pdf-viewer__controls">
+            <button id="prev" class="btn pdf-viewer__button page-switch">Poprzednia</button>
+            <div class="pdf-viewer__pagination">
+                <span>Strona: <span id="page_num"></span> / <span id="page_count"></span></span>
+            </div>
+            <button id="next" class="btn pdf-viewer__button page-switch">Następna</button>
+        </div>
+    </section>
+
+
+    <aside id="drawer" class="drawer">
+        <header class="drawer__header">
+            <h2>Do pobrania</h2>
+            <div class="hamburger hamburger--close">
+                <span class="hambuger__line1"></span>
+            </div>
+        </header>
+        <div class="drawer__attachments">
+            <div id="links">
+                brak załączników
+
+
+            </div>
+            <a class="direct-link" href="./assets/ppnt_sign-book.pdf" download>Pobierz księgę identyfikacji
+                wizualnej</a>
+        </div>
+    </aside>
+</main>
+
+<script src="main.bundle.js"></script>
+
+
+</body>
+</html>

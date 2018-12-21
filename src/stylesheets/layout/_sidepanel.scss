@@ -1,0 +1,26 @@
+.sidepanel {
+    width: 280px;
+    background: $colorWhite;
+    .sidepanel__section {
+        &:not(:last-child) {
+            border-bottom: solid 1px $borderLight;
+        }
+    }
+    .sidepanel__section-wrapper {
+        padding: 10px 20px;
+    }
+    .sidepanel__section-title {
+        height: 40px;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        h3 {
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 0.1em;
+        }
+    }
+}

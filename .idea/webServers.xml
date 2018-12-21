@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a68bb0aa-a362-4eb2-8ea0-45996b5a0d29" name="ppnt-website" url="http://ppnt.gdynia.pl">
+        <fileTransfer host="ppnt.gdynia.pl" port="21" rootFolder="/www/site.ppnt.pl/web">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="5e5e24b3-c0f4-47f3-bb03-8a89ac001b28" name="staging3" url="http://s3.zenbox.pl">
+        <fileTransfer host="s3.zenbox.pl" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

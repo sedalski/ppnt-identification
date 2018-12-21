@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import
+'abstracts/colors';
+
+// 2. Vendors
+@import
+'vendor/_sanitize.css';
+
+// 3. Base stuff
+@import
+'base/typography',
+'base/base';
+//'base/fonts',
+//'base/icons',
+//'base/line-type';
+
+// 4. Layout-related sections
+@import
+//'layout/layout',
+'layout/header',
+'layout/pdf-viewer';
+//'layout/footer',
+//'layout/sidepanel',
+//'layout/accordion';
+
+// 5. Modules
+@import
+'modules/button',
+'modules/drawer',
+'modules/hamburger';
+//'modules/button-section',
+//'modules/input-element',
+//'modules/_fieldset',
+//'modules/_dropdown';
+
+// 6. Page-specific styles
+//@import
+//'pages/homepage';

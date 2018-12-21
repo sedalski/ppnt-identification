@@ -1,0 +1,65 @@
+.drawer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    background-color: $color-white;
+    transform: translateX(100%);
+    transition: .2s all;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    &__header {
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+        background-color: $color-red;
+        color: $color-white;
+        padding: 0 40px 0 20px;
+        align-items: center;
+    }
+    &__attachments {
+        font-family: $fontSerif;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 20px;
+        flex-grow: 1;
+        position: relative;
+        &::after {
+            content: "";
+            height: 100%;
+            width: 1px;
+            position: absolute;
+            left: -1px;
+            top: 0;
+            background: $colorGreyLight;;
+        }
+        a {
+            line-height: 2;
+            color: $color-black;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            padding-left: 26px;
+            &::before {
+                content: "";
+                height: 20px;
+                width: 20px;
+                position: absolute;
+                left: 0;
+                background: url("/assets/icon-download-dark.svg") no-repeat;
+            }
+            &.direct-link {
+                margin-top: auto;
+            }
+        }
+    }
+
+    @at-root .drawer-open & {
+        transform: translateX(0);
+
+    }
+}
