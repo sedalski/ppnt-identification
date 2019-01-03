@@ -1,43 +1,41 @@
 .drawer {
-    position: fixed;
+    //position: fixed;
+    position: relative;
     top: 0;
     bottom: 0;
     right: 0;
-    width: 400px;
+    width: 280px;
     background-color: $color-white;
-    transform: translateX(100%);
+    //transform: translateX(100%);
     transition: .2s all;
     z-index: 2;
     display: flex;
     flex-direction: column;
+    padding: 20px 18px;
+    #links {
+        a {
+            line-height: 22px;
+        }
+    }
     &__header {
         display: flex;
         flex-direction: row;
-        height: 60px;
-        background-color: $color-red;
-        color: $color-white;
-        padding: 0 40px 0 20px;
         align-items: center;
+        font-size: 16px;
+        margin-bottom: 10px;
+        svg * {
+            fill: $colorGreyDark;
+        }
     }
     &__attachments {
         font-family: $fontSerif;
-        font-size: 14px;
+        font-size: 12px;
         display: flex;
         flex-direction: column;
-        padding: 40px 20px;
         flex-grow: 1;
         position: relative;
-        &::after {
-            content: "";
-            height: 100%;
-            width: 1px;
-            position: absolute;
-            left: -1px;
-            top: 0;
-            background: $colorGreyLight;;
-        }
         a {
-            line-height: 2;
+            line-height: 22px;
             color: $color-black;
             display: flex;
             align-items: center;
@@ -46,10 +44,11 @@
             padding-left: 26px;
             &::before {
                 content: "";
-                height: 20px;
+                height: 22px;
                 width: 20px;
                 position: absolute;
                 left: 0;
+                top: 2px;
                 background: url("/assets/icon-download-dark.svg") no-repeat;
             }
             &.direct-link {

@@ -100,6 +100,15 @@ function pdfReader() {
 
     document.getElementById('next').addEventListener('click', onNextPage);
 
+
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") {
+            onPrevPage();
+        } else if (e.key === "ArrowRight") {
+            onNextPage();
+        }
+    });
+
     /**
      * Asynchronously downloads PDF.
      */
@@ -143,9 +152,15 @@ function pdfReader() {
             });
         }
 
-
         document.querySelector('#next').addEventListener('click', showAttachments);
         document.querySelector('#prev').addEventListener('click', showAttachments);
+
+
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+                showAttachments();
+            }
+        });
     };
 
     request.send();

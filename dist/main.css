@@ -663,88 +663,96 @@ body {
 .header {
   display: flex;
   flex-direction: row;
-  height: 60px;
+  height: 50px;
   background-color: #041e42;
   color: #ffffff;
-  padding: 0 40px;
+  padding: 0 20px;
   align-items: center;
-  position: fixed;
   left: 0;
   right: 0;
   top: 0;
-  z-index: 1; }
+  z-index: 1;
+  flex-shrink: 0; }
+  .header h1 {
+    font-size: 20px; }
 
 .pdf-viewer {
-  margin: 100px auto 0;
-  width: 100%;
-  max-width: 1280px;
   position: relative;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  background: #e6e6e6;
   align-items: center;
-  font-family: "Merriweather", "Times New Roman", Times, serif; }
-  .pdf-viewer__viewport {
-    width: 100%; }
-  .pdf-viewer__controls {
-    margin-top: 30px;
+  padding: 10px 10px 0 10px; }
+  .pdf-viewer__wrapper {
     display: flex;
-    flex-direction: row;
-    margin-bottom: 20px; }
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    position: relative; }
+    .pdf-viewer__wrapper canvas {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto; }
+  .pdf-viewer__viewport {
+    max-width: 100%;
+    max-height: 100%; }
+  .pdf-viewer__controls {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row; }
   .pdf-viewer__button {
-    width: 200px; }
+    width: 140px; }
   .pdf-viewer__pagination {
     width: 180px;
+    font-size: 14px;
     display: flex;
     justify-content: center;
     align-items: center; }
 
 .btn {
-  padding: 14px 50px 16px;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 12px;
   color: #ffffff;
   font-family: "Merriweather", "Times New Roman", Times, serif;
   background-color: #041e42;
   cursor: pointer; }
 
 .drawer {
-  position: fixed;
+  position: relative;
   top: 0;
   bottom: 0;
   right: 0;
-  width: 400px;
+  width: 280px;
   background-color: #ffffff;
-  transform: translateX(100%);
   transition: .2s all;
   z-index: 2;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 20px 18px; }
+  .drawer #links a {
+    line-height: 22px; }
   .drawer__header {
     display: flex;
     flex-direction: row;
-    height: 60px;
-    background-color: #d50032;
-    color: #ffffff;
-    padding: 0 40px 0 20px;
-    align-items: center; }
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 10px; }
+    .drawer__header svg * {
+      fill: #5e5e5e; }
   .drawer__attachments {
     font-family: "Merriweather", "Times New Roman", Times, serif;
-    font-size: 14px;
+    font-size: 12px;
     display: flex;
     flex-direction: column;
-    padding: 40px 20px;
     flex-grow: 1;
     position: relative; }
-    .drawer__attachments::after {
-      content: "";
-      height: 100%;
-      width: 1px;
-      position: absolute;
-      left: -1px;
-      top: 0;
-      background: #e6e6e6; }
     .drawer__attachments a {
-      line-height: 2;
+      line-height: 22px;
       color: #000000;
       display: flex;
       align-items: center;
@@ -753,10 +761,11 @@ body {
       padding-left: 26px; }
       .drawer__attachments a::before {
         content: "";
-        height: 20px;
+        height: 22px;
         width: 20px;
         position: absolute;
         left: 0;
+        top: 2px;
         background: url("/assets/icon-download-dark.svg") no-repeat; }
       .drawer__attachments a.direct-link {
         margin-top: auto; }
@@ -780,4 +789,13 @@ body {
     display: block;
     transform: rotate(-45deg);
     position: absolute; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; }
+  main .row-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1; }
 
